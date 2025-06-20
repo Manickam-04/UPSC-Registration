@@ -1,6 +1,5 @@
 import mysql.connector as sql
 
-# Database connection
 def connect_to_database():
     try:
         conn = sql.connect(host='localhost', user="root", passwd='jeevitha', database='mv')
@@ -11,7 +10,6 @@ def connect_to_database():
         print("Error connecting to database:", e)
         return None
 
-# Create tables if not already present
 def setup_tables(conn):
     try:
         cursor = conn.cursor()
